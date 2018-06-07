@@ -1,8 +1,8 @@
 import re
 from django.conf import settings
 from staticgenerator import StaticGenerator
-
-class StaticGeneratorMiddleware(object):
+from django.utils.deprecation import MiddlewareMixin
+class StaticGeneratorMiddleware(MiddlewareMixin):
     """
     This requires settings.STATIC_GENERATOR_URLS tuple to match on URLs
     
